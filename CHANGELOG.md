@@ -1,3 +1,6 @@
+## [0.0.1-beta.4] - 24 September 2020
+- Updated documentation.
+
 ## [0.0.1-beta.3] - 24 September 2020
 - Updated documentation.
 

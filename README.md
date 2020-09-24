@@ -15,7 +15,7 @@ pub.dartlang.org: (you can use 'any' instead of a version if you just want the l
 
 ```yaml
 dependencies:
-  time_duration: 0.0.1-beta.3
+  time_duration: 0.0.1-beta.4
 ```
 
 ```dart
@@ -29,7 +29,9 @@ See the examples in the example directory to learn how to use some of the featur
 ## Testing
 
 ```
-flutter test test
+pub run test
+
+# Using flutter_test SDK, please use this command: flutter test test
 ```
 
 ## Release notes
