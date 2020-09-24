@@ -1,8 +1,8 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:time_duration/time_duration.dart';
 
 void main() {
-  test('calculate time', () {
+  test('Calculate Time Test', () {
     final timeDuration = TimeDuration();
     timeDuration.computeTime(
       fromHour: 11,

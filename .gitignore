@@ -30,9 +30,12 @@
 .pub/
 .flutter-plugins
 .flutter-plugins-dependencies
-build/
 lib/generated_plugin_registrant.dart
+# Conventional directory for build outputs
+build/
 # If you're building an application, you may want to check-in your pubspec.lock
+# Omit commiting pubspec.lock for library packages:
+# https://dart.dev/guides/libraries/private-files#pubspeclock
 pubspec.lock
 
 # Avoid committing generated Javascript files:

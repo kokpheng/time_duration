@@ -5,18 +5,22 @@ class TimeDurationPeriod {
   /// The value for private.
   final int _value;
   const TimeDurationPeriod._internal(this._value);
-  toString() => '$_value';
+
+  /// Return value in integer.
   int toInt() => _value;
 
   /// The AM constant.
   ///
   /// The value is 0 in integer.
-  static const AM = const TimeDurationPeriod._internal(0);
+  static const AM = TimeDurationPeriod._internal(0);
 
   /// The PM constant.
   ///
   /// The value is 1 in integer.
-  static const PM = const TimeDurationPeriod._internal(1);
+  static const PM = TimeDurationPeriod._internal(1);
+
+  @override
+  String toString() => '$_value';
 }
 
 /// A class used to calculate duration of two times "From:" and "To:".
@@ -117,7 +121,7 @@ class TimeDuration {
         t5 = t3 - (t4 * 60);
       }
     }
-    this.hours = t4;
-    this.minutes = t5;
+    hours = t4;
+    minutes = t5;
   }
 }

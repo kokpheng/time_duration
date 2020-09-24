@@ -16,7 +16,7 @@ void main() {
   );
 
   // => 3 hours
-  print(timeDuration.hours); // -> 3
+  print(timeDuration.hours);
 
   // => 9 minutes
   print(timeDuration.minutes);
