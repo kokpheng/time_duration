@@ -61,10 +61,13 @@ class TimeDuration {
       int toHour,
       int toMinute,
       TimeDurationPeriod toPeriod}) {
+    // ignore: omit_local_variable_types
     int t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0;
+    // ignore: omit_local_variable_types
     int h1 = fromHour,
         m1 = fromMinute,
         er3a = fromPeriod.toInt(); // 0 = am, 1 = pm
+    // ignore: omit_local_variable_types
     int h2 = toHour, m2 = toMinute, er3b = toPeriod.toInt(); // 0 = am, 1 = pm
 
     if ((er3a == 0) && (h1 == 12)) h1 = 0;
