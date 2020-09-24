@@ -1,24 +1,67 @@
 part of time_duration;
 
+/// An Enum of period represents in AM or PM.
 class TimeDurationPeriod {
+  /// The value for private.
   final int _value;
   const TimeDurationPeriod._internal(this._value);
   toString() => '$_value';
   int toInt() => _value;
 
+  /// The AM constant.
+  ///
+  /// The value is 0 in integer.
   static const AM = const TimeDurationPeriod._internal(0);
+
+  /// The PM constant.
+  ///
+  /// The value is 1 in integer.
   static const PM = const TimeDurationPeriod._internal(1);
 }
 
+/// A class used to calculate duration of two times "From:" and "To:".
 class TimeDuration {
+  /// The number of hours.
+  ///
+  /// This will start from 0.
   int hours = 0;
+
+  /// The number of minutes.
+  ///
+  /// This will start from 0.
   int minutes = 0;
+
+  /// The number of total time in minutes.
+  ///
+  /// The formula is  (hours * 60) + minutes
   int get inMinutes => (hours * 60) + minutes;
 
-  void computeTime({int fromHour, int fromMinute, TimeDurationPeriod fromPeriod, int toHour, int toMinute, TimeDurationPeriod toPeriod}) {
+  /// Calculate hours and minutes.
+  ///
+  /// The following arguments must not be null:
+  ///
+  /// The first three parameters are earlier or start time information at "From:"
+  /// * [fromHour] define From Hours (must be a positive number between 1 and 12 or zero (0)).
+  /// * [fromMinute] define From Minutes (must be a positive number between 1 and 59 or zero (0)).
+  /// * [fromPeriod] define From Period (must be a TimeDurationPeriod Enum AM or PM).
+  ///
+  /// The following other three parameters are later or end time information at "To:"
+  /// * [toHour] define To Hours (must be a positive number between 1 and 12 or zero (0)).
+  /// * [toMinute] define To Minutes (must be a positive number between 1 and 59 or zero (0)).
+  /// * [toPeriod] define To Period (must be a TimeDurationPeriod Enum AM or PM).
+  ///
+  void computeTime(
+      {int fromHour,
+      int fromMinute,
+      TimeDurationPeriod fromPeriod,
+      int toHour,
+      int toMinute,
+      TimeDurationPeriod toPeriod}) {
     int t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0;
-    int h1 = fromHour, m1 = fromMinute, er3a = fromPeriod.toInt(); // 0 = am, 1 = pm
-    int h2 = toHour, m2 = toMinute, er3b = toPeriod.toInt();
+    int h1 = fromHour,
+        m1 = fromMinute,
+        er3a = fromPeriod.toInt(); // 0 = am, 1 = pm
+    int h2 = toHour, m2 = toMinute, er3b = toPeriod.toInt(); // 0 = am, 1 = pm
 
     if ((er3a == 0) && (h1 == 12)) h1 = 0;
 

@@ -12,31 +12,11 @@ pub.dartlang.org: (you can use 'any' instead of a version if you just want the l
 
 ```yaml
 dependencies:
-  time_duration: 0.0.1-beta.1
+  time_duration: 0.0.1-beta.2
 ```
 
 ```dart
 import 'package:time_duration/time_duration.dart';
-```
-
-```dart
-// Create an object of TimeDuration
-final timeDuration = TimeDuration();
-
-// Input your times
-// Example: From 11:00 PM -> to 02:09 AM
-timeDuration.computeTime(
-  fromHour: 11,
-  fromMinute: 0,
-  fromPeriod: TimeDurationPeriod.PM,
-  toHour: 2,
-  toMinute: 9,
-  toPeriod: TimeDurationPeriod.AM,
-);
-
-timeDuration.hours; // -> 3
-timeDuration.minutes; // -> 9
-timeDuration.inMinutes; // -> 189
 ```
 
 ## Testing
@@ -47,4 +27,4 @@ flutter test test
 
 ## Release notes
 
-See CHANGELOG.md
+See [CHANGELOG.md](CHANGELOG.md)
