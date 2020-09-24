@@ -1,3 +1,6 @@
+## [1.0.1-nullsafety.2] - 24 September 2020
+- Update README and travis.yml.
+
 ## [1.0.1-nullsafety.1] - 24 September 2020
 - Create a prerelease package.
 

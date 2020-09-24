@@ -20,7 +20,7 @@ pub.dartlang.org: (you can use 'any' instead of a version if you just want the l
 
 ```yaml
 dependencies:
-  time_duration: 1.0.1-nullsafety.1
+  time_duration: 1.0.1-nullsafety.2
 ```
 
 ```dart
