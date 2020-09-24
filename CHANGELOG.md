@@ -1,3 +1,6 @@
+## [1.0.0] - 24 September 2020
+- Release of the time_duration package.
+
 ## [0.0.1-beta.4] - 24 September 2020
 - Updated documentation.
 

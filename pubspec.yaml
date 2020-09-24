@@ -1,6 +1,6 @@
 name: time_duration
 description: A simple API to find the hours and minutes between two times.
-version: 0.0.1-beta.4
+version: 1.0.0
 homepage: https://github.com/yinkokpheng/time_duration
 
 environment:
